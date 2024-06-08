@@ -5,7 +5,7 @@ class Qemu < Formula
   url "https://download.qemu.org/qemu-7.2.0.tar.xz"
   sha256 "5b49ce2687744dad494ae90a898c52204a3406e84d072482a1e1be854eeb2157"
   license "GPL-2.0-only"
-  head "https://git.qemu.org/git/qemu.git", branch: "master"
+  head "https://git.qemu.org/git/qemu.git", branch: "stable-7.2"
 
   bottle do
     sha256 arm64_ventura:  "fa987f9dc770812c58333c910cb0f5c4e730d513a1568cc4d6a215dfa3ac82d1"
