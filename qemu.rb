@@ -18,6 +18,7 @@ class Qemu < Formula
   end
 
   def install
+    ENV["LIBTOOL"] = "glibtool"
     system "./configure"
     system "make", "install"
   end
