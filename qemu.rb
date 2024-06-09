@@ -85,8 +85,9 @@ class Qemu < Formula
       ["--enable-gtk"]
     end
 
-    system "./configure", *args
-    system "make", "V=1", "install"
+    # system "./configure", *args
+    system "./configure"
+    system "make", "install"
   end
 
   test do
