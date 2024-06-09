@@ -18,7 +18,38 @@ class Qemu < Formula
   end
 
   depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+
   depends_on "glib"
+  depends_on "gnutls"
+  depends_on "jpeg-turbo"
+  depends_on "libpng"
+  depends_on "libslirp"
+  depends_on "libssh"
+  depends_on "libusb"
+  depends_on "lzo"
+  depends_on "ncurses"
+  depends_on "nettle"
+  depends_on "pixman"
+  depends_on "snappy"
+  depends_on "vde"
+  depends_on "zstd"
+
+  on_linux do
+    depends_on "attr"
+    depends_on "gtk+3"
+    depends_on "libcap-ng"
+  end
+
+  fails_with gcc: "5"
+
+  # 820KB floppy disk image file of FreeDOS 1.2, used to test QEMU
+  resource "homebrew-test-image" do
+    url "https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/official/FD12FLOPPY.zip"
+    sha256 "81237c7b42dc0ffc8b32a2f5734e3480a3f9a470c50c14a9c4576a2561a35807"
+  end
 
   def install
     ENV["LIBTOOL"] = "glibtool"
