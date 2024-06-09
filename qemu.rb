@@ -17,6 +17,9 @@ class Qemu < Formula
     sha256 x86_64_linux:   "05ece9acbbb003a7e8035f18f5193ae7c9caffacd60a744eac629de4a545aea4"
   end
 
+  depends_on "libtool" => :build
+  depends_on "glib"
+
   def install
     ENV["LIBTOOL"] = "glibtool"
     system "./configure"
