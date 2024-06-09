@@ -17,10 +17,10 @@ class Qemu < Formula
     sha256 x86_64_linux:   "05ece9acbbb003a7e8035f18f5193ae7c9caffacd60a744eac629de4a545aea4"
   end
 
-  depends_on "libtool"
-  depends_on "meson"
-  depends_on "ninja"
-  depends_on "pkg-config"
+  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
 
   depends_on "glib"
   depends_on "gnutls"
